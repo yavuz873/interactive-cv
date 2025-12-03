@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yavuz Selim Erkmen | Full-Stack Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS bağlantısı -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
+</head>
+
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <div class="logo-mark">Y</div>
+        <div class="logo-text">
+          <span class="logo-name">Yavuz Selim Erkmen</span>
+          <span class="logo-role">Full-Stack Developer</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-main">
+        <div class="hero-chip-row">
+          <div class="chip">
+            <span class="chip-dot"></span>
+            Available for Junior Roles
+          </div>
+          <div class="chip chip-pill">
+            Osaka-focused • Full-Stack
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          Junior <span>Full-Stack Developer</span>
+          with hands-on Flask experience.
+        </h1>
+
+        <p class="hero-sub">
+          I build simple, functional web applications using
+          <strong>Python (Flask), HTML, CSS, and JavaScript.</strong>
+          I previously lived in <strong>Osaka for 6 months</strong>, so I’m already
+          familiar with Japanese daily life, communication, and workflow culture.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-item">
+            <span class="meta-dot"></span>
+            Based in Türkiye • Open to relocate to Osaka
+          </div>
+          <div class="meta-item">
+            <span class="meta-dot"></span>
+            Focus: Junior Full-Stack / Web Developer roles
+          </div>
+        </div>
+
+        <div class="hero-accent-orb"></div>
+      </div>
+
+      <aside class="hero-side">
+        <div class="card">
+          <div class="card-title">Focus Areas</div>
+          <div class="card-main">
+            Full-stack web development with a clean, minimal front-end
+            and simple, maintainable back-end logic in Python (Flask).
+          </div>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">HTML &amp; CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">SQLite (basic)</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Experience in Japan</div>
+          <div class="card-main">
+            Lived in <strong>Osaka for 6 months</strong>, observing Japanese
+            workflow and daily communication.
+            Comfortable with long-term relocation and Kansai culture.
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-headline">About</div>
+      <div class="section-title">Who I am</div>
+      <p class="section-description">
+        I am a <strong>Junior Full-Stack Developer</strong> focusing on Python (Flask)
+        for the back-end and semantic HTML/CSS with basic JavaScript on the
+        front-end. I enjoy turning ideas into small, functional web applications.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-headline">Skills</div>
+      <div class="section-title">What I work with</div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-title">Back-End</div>
+          <div class="skill-list">Python, Flask, routing, templates, basic APIs</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-title">Front-End</div>
+          <div class="skill-list">HTML5, CSS3, responsive basics, simple JS</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-title">Tools</div>
+          <div class="skill-list">GitHub, SQLite, JSON, PyCharm</div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-title">Soft Skills</div>
+          <div class="skill-list">Discipline, consistency, adaptation to Japan</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-headline">Projects</div>
+      <div class="section-title">Things I’ve built</div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-tech">Python • Flask • HTML • CSS</div>
+          <div class="project-title">Coffee E-Commerce Website</div>
+          <p class="project-desc">
+            A simple coffee e-commerce style website built with Flask.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-tech">Python • Flask</div>
+          <div class="project-title">Single Question Voting App</div>
+          <p class="project-desc">
+            A minimal voting platform practicing form handling and Flask logic.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-headline">Contact</div>
+      <div class="section-title">Let’s talk</div>
+
+      <div class="contact-card">
+        <div class="contact-text">
+          I’m open to <span class="contact-highlight">Junior Developer</span> roles,
+          especially in <span class="contact-highlight">Osaka</span>.
+        </div>
+
+        <div class="contact-actions">
+          <a href="mailto:example@email.com"
+             class="btn btn-primary">Email me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <span>© <span id="year"></span> Yavuz Selim Erkmen</span>
+      <span>Built with Flask</span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
